@@ -82,15 +82,16 @@ Then specify the list of servers and connection authentication data: `name`,`ip`
 * set the value `localhost: True` on one server in the list if you run the script `scan_servers.py` on the server where the Stratos nodes resource is located, otherwise leave  `localhost: False`
 
 ## Run
-To connect servers and check statuses automatically, we will use the `screen` tool:
+To connect servers and check statuses automatically
+ - We will use the `screen` tool:
 ```
 apt-get install screen
 ```
-- Start a session with name `status`:
+* Start a session with name `status`:
 ```
 screen -S status
 ```
-* Lets run script:
++ Lets run script:
 ```
 python3 scan-servers.py
 ```
