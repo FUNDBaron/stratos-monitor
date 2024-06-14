@@ -2,7 +2,7 @@
 Stratos nodes info, monitoring and notifications.
 This is a tool used to connect to the servers and obtain information about the status of running Stratos nodes and send status/storage/rewards data to the console and telegram chat.
 
-# Run and Python Dependencies
+## Run and Python Dependencies
 
 ```
 apt-get install python3-pip
@@ -17,14 +17,14 @@ pip install getpass4
 pip install argparse
 ```
 
-# Configuration
+## Configuration
 
 Here you install the client, the current client is Telegram. You will need to provide the ID of the channel you want to send messages to and the Telegram bot API key accordingly.
 
-## Create a Telegram Bot and get a Bot Token:
+### Create a Telegram Bot and get a Bot Token:
 [How to get Telegram API key](https://www.siteguarding.com/en/how-to-get-telegram-bot-api-token)
 
-## Get Chat ID for a Private Chat:
+### Get Chat ID for a Private Chat:
 
 1. Search and open our new Telegram bot
 2. Click Start or send a message
@@ -59,7 +59,7 @@ Here you install the client, the current client is Telegram. You will need to pr
 9. Let's try to send a message: `https://api.telegram.org/bot63xxxxxx71:AAFoxxxxn0hwA-2TVSxxxNf4c/sendMessage?chat_id=-100xxxxxxxx45&text=test123`
 10. When you set the bot token and chat id correctly, the message `test123` should be arrived on our Telegram bot chat.
 
-# Build
+## Build
 
 To run the tool stratos-monitor yourself, clone the repository:
 
