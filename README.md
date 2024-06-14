@@ -6,25 +6,15 @@ This is a tool used to connect to the servers and obtain information about the s
 
 ```
 apt-get install python3-pip
-
 pip install paramiko
-
 pip install sockets
-
 pip3 install requests
-
 pip install pexpect
-
 pip install pandas
-
 pip install toml
-
 pip install tabulate
-
 pip install getpass4
-
 pip install argparse
-
 ```
 
 # Configuration
@@ -45,24 +35,25 @@ Here you install the client, the current client is Telegram. You will need to pr
  - See we need to prefix our token with a wor `bot`
  * Eg: `https://api.telegram.org/bot63xxxxxx71:AAFoxxxxn0hwA-2TVSxxxNf4c/getUpdates`
 7. We will see a json like so 
-```   {
+``` 
+{
       "update_id": 565837220,
       "channel_post": {
         "message_id": 1235,
         "sender_chat": {
           "id": -100xxxxxxxx45,
-          "title": "stratos_monitor",
+          "title": "sds-monitor",
           "type": "channel"
         },
         "chat": {
           "id": -100xxxxxxxx45,
-          "title": "stratos_monitor",
+          "title": "sds-monitor",
           "type": "channel"
         },
         "date": 1718883704,
         "text": "hello",
         "has_protected_content": true
-    }
+}
 ```
 8. Check the value of `.chat.id`, and here is our Chat ID: `-100xxxxxxxx45`
 9. Let's try to send a message: `https://api.telegram.org/bot63xxxxxx71:AAFoxxxxn0hwA-2TVSxxxNf4c/sendMessage?chat_id=-100xxxxxxxx45&text=test123`
