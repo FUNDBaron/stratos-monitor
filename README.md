@@ -76,10 +76,7 @@ cd stratos-monitor
 - `TOKEN` - telegram API Token received from the Father_bot when creating your new_bot
 * `CHAT_ID` - chat identifier to which notifications about node statuses will be sent
 
-Then specify the list of servers and connection authentication data:
-- `name`,
-* `ip`,
-+ `login`,
+Then specify the list of servers and connection authentication data: `name`,`ip`,`login`,
 - `password` or `sshkey` - path to ssh the private key file (specify the path relative to the location of the `connect.py` and `scan_servers.py` files),
 * set the value `localhost: True` on one server in the list if you run the script `scan_servers.py` on the server where the Stratos nodes resource is located, otherwise leave  `localhost: False`
 
