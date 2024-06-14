@@ -1,7 +1,7 @@
 # Stratos monitoring and notifications nodes
 This is a tool used to connect to the servers and obtain information about the status info of running Stratos nodes and send status/storage/rewards data to the monitoring console and telegram chat notifications.
 
-## Run and Python Dependencies
+## Install and Python Dependencies
 
 ```
 apt-get install python3-pip
@@ -58,7 +58,7 @@ Here you install the client, the current client is Telegram. You will need to pr
 9. Let's try to send a message: `https://api.telegram.org/bot63xxxxxx71:AAFoxxxxn0hwA-2TVSxxxNf4c/sendMessage?chat_id=-100xxxxxxxx45&text=test123`
 10. When you set the bot token and chat id correctly, the message `test123` should be arrived on our Telegram bot chat.
 
-## Build
+## Run
 
 To run the tool stratos-monitor yourself, clone the repository:
 
@@ -69,18 +69,19 @@ change directory on:
 ```
 cd stratos-monitor
 ```
-first configure the `сonnect.py` file and specify:
+### Configure the `сonnect.py` file:
 - `time_long_pause` - the waiting time interval after which you want to check statuses nodes on each server
 * `time_short_pause` -timeout interval for the `status.py` script to complete execution (the more data your nodes store, the longer the interval should be specified)
 + `path_to_status_script` - path to the `status.py` file starting from the home directory of the logged in user(default: $HOME directory)
 - `TOKEN` - telegram API Token received from the Father_bot when creating your new_bot
 * `CHAT_ID` - chat identifier to which notifications about node statuses will be sent
+
 Then specify the list of servers and connection authentication data:
-    - name,
-    * ip,
-    + login,
-    - password or path to the private key file ssh-key (specify the path relative to the location of the `connect.py` and `scan_servers.py` files),
-    * set the value `localhost: True` on one of the servers specified in the list if you are running the scan_servers.py script on one of the Stratos servers, otherwise if you are running on a remote server other than the Stratos server, leave `localhost: False`.
+- `name`,
+* `ip`,
++ `login`,
+- `password` or `sshkey` - path to ssh the private key file (specify the path relative to the location of the `connect.py` and `scan_servers.py` files),
+* set the value `localhost: True` on one server in the list if you run the script `scan_servers.py` on the server where the Stratos nodes resource is located, otherwise leave  `localhost: False`
 
 
 
