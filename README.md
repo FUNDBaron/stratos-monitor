@@ -24,9 +24,9 @@ Here you install the client, the current client is Telegram. You will need to pr
 
 1. Search and open our new Telegram bot
 2. Click `\start` or send any a message
-3. Create new your private chat or channel, for example `sds-monitor`
-4. Add our Telegram bot into a private chat(channel) and make him an administrator
-5. Send a message to your the private chat(channel) for example `hello`
+3. Create new your **private** chat, for example `sds-monitor`
+4. Add our Telegram bot into a **private** chat and make him an **administrator**
+5. Send a message to your the **private** chat, for example: `hello`
 6. Open this URL in a browser: `https://api.telegram.org/bot{our_api_bot_token}/getUpdates`
  - See we need to prefix our token with a wor `bot`
  * Eg: `https://api.telegram.org/bot63xxxxxx71:AAFoxxxxn0hwA-2TVSxxxNf4c/getUpdates`
