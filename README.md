@@ -5,7 +5,7 @@ This is a tool used to connect to the servers and obtain information about the s
 
 Install Python3 (I used Python 3.10.12 and 3.12.3) and package management system `pip` and dependencies of other libraries
 ```
-sudo apt install python3.12
+apt install python3.12
 apt-get install python3-pip
 pip install paramiko
 pip install sockets
@@ -112,6 +112,8 @@ screen -ls
 screen -r status
 ``` 
 - To exit the **screen** session and close it, enter `exit` or press the combination *Ctrl+D*
+
+I also want to thank **@FrogeWorld** validator Stratos for starting the path for these scripts
 
 
 
