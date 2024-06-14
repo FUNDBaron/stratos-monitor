@@ -27,4 +27,11 @@ pip install argparse
 
 ```
 
+# Configuration
+
+Here you install the client, the current client is Telegram. You will need to provide the ID of the channel you want to send messages to and the Telegram bot API key accordingly.
+
+[How to get Telegram API key](https://www.siteguarding.com/en/how-to-get-telegram-bot-api-token)
+
+
 
