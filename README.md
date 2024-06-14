@@ -23,7 +23,7 @@ Here you install the client, the current client is Telegram. You will need to pr
 ### Get Chat ID for a Private Chat:
 
 1. Search and open our new Telegram bot
-2. Click Start or send a message
+2. Click `\start` or send any a message
 3. Create new your private chat or channel, for example `sds-monitor`
 4. Add our Telegram bot into a private chat(channel) and make him an administrator
 5. Send a message to your the private chat(channel) for example `hello`
