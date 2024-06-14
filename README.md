@@ -107,8 +107,8 @@ screen -ls
 * To join an existing session again:
 ```
 screen -r status
-```
-To exit the **screen** session and close it, enter `exit` or press the combination *Ctrl+D*
+``` 
+- To exit the **screen** session and close it, enter `exit` or press the combination *Ctrl+D*
 
 
 
