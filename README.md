@@ -28,10 +28,10 @@ Here you install the client, the current client is Telegram. You will need to pr
 
 1. Search and open our new Telegram bot
 2. Click Start or send a message
-3. Create new your private chat, for example 'sds-monitor'
-4. Add our Telegram bot into a private chat and make him an administrator
-5. Send a message to your the private chat
-6. Open this URL in a browser `https://api.telegram.org/bot{our_bot_token}/getUpdates`
+3. Create new your private chat or channel, for example `sds-monitor`
+4. Add our Telegram bot into a private chat(channel) and make him an administrator
+5. Send a message to your the private chat(channel) for example `hello`
+6. Open this URL in a browser: `https://api.telegram.org/bot{our_api_bot_token}/getUpdates`
  - See we need to prefix our token with a wor `bot`
  * Eg: `https://api.telegram.org/bot63xxxxxx71:AAFoxxxxn0hwA-2TVSxxxNf4c/getUpdates`
 7. We will see a json like so 
@@ -50,13 +50,14 @@ Here you install the client, the current client is Telegram. You will need to pr
           "title": "sds-monitor",
           "type": "channel"
         },
-        "date": 1718883704,
+        "date": 1047188837,
         "text": "hello",
         "has_protected_content": true
 }
 ```
 8. Check the value of `.chat.id`, and here is our Chat ID: `-100xxxxxxxx45`
 9. Let's try to send a message: `https://api.telegram.org/bot63xxxxxx71:AAFoxxxxn0hwA-2TVSxxxNf4c/sendMessage?chat_id=-100xxxxxxxx45&text=test123`
+10. When you set the bot token and chat id correctly, the message `test123` should be arrived on our Telegram bot chat.
 
 # Build
 
