@@ -70,17 +70,17 @@ change directory on:
 cd stratos-monitor
 ```
 first configure the `сonnect.py` file and specify:
-- >ime_long_pause - the waiting time interval after which you want to check statuses nodes on each server
-* >time_short_pause` -timeout interval for the `status.py` script to complete execution (the more data your nodes store, the longer the interval should be specified)
-+ >path_to_status_script - path to the `status.py` file starting from the home directory of the logged in user(default: $HOME directory)
-- >TOKEN - telegram API Token received from the Father_bot when creating your new_bot
-* >CHAT_ID - chat identifier to which notifications about node statuses will be sent
-+ >Then specify the list of servers and connection authentication data:
-    1. name,
-    2. ip,
-    3. login,
-    4. password or path to the private key file ssh-key (specify the path relative to the location of the `connect.py` and `scan_servers.py` files)
-    5. set the `localhost` value on one of the servers if you run the scan_servers.py script on one of the Stratos servers
+- `time_long_pause` - the waiting time interval after which you want to check statuses nodes on each server
+* `time_short_pause` -timeout interval for the `status.py` script to complete execution (the more data your nodes store, the longer the interval should be specified)
++ `path_to_status_script` - path to the `status.py` file starting from the home directory of the logged in user(default: $HOME directory)
+- `TOKEN` - telegram API Token received from the Father_bot when creating your new_bot
+* `CHAT_ID` - chat identifier to which notifications about node statuses will be sent
+Then specify the list of servers and connection authentication data:
+    - name,
+    * ip,
+    + login,
+    - password or path to the private key file ssh-key (specify the path relative to the location of the `connect.py` and `scan_servers.py` files),
+    * set the value `localhost: True` on one of the servers specified in the list if you are running the scan_servers.py script on one of the Stratos servers, otherwise if you are running on a remote server other than the Stratos server, leave `localhost: False`.
 
 
 
