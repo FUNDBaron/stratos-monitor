@@ -68,7 +68,7 @@ git clone https://github.com/FUNDBaron/stratos-monitor
 cd stratos-monitor
 ```
 3. Place the `status.py` script on each of the servers where Stratos node resource running, for example: in the user $HOME directory
-4. Place the `scan-servers.py` and `connect.py` scripts on the server from which the script will connect to the Stratos servers
+4. Place the `scan_servers.py` and `connect.py` scripts on the server from which the script will connect to the Stratos servers
 
 ### Configure the `сonnect.py` file:
 - `time_long_pause` - the waiting time interval after which you want to check statuses nodes on each server
@@ -93,7 +93,7 @@ screen -S status
 ```
 + Lets run script:
 ```
-python3 scan-servers.py
+python3 scan_servers.py
 ```
 
 
