@@ -17,12 +17,12 @@ pip install argparse
 ## Pre-Configure
 Here you install the client, the current client is Telegram. You will need to provide the ID of the channel you want to send messages to and the Telegram bot API key accordingly.
 
-### Create a Telegram Bot and get a Bot Token:
-Сreate a new telegram bot and get an API Token key.
+### Create a Telegram Bot and get a Bot Token
+Сreate a new telegram bot and get an API Token key:
 
 [How to get Telegram API key](https://www.siteguarding.com/en/how-to-get-telegram-bot-api-token)
 
-### Get Chat ID for a Private Chat:
+### Get Chat ID for a Private Chat
 1. Search and open our new Telegram bot
 2. Click `\start` or send any a message
 3. Create new your **private** chat, for example `sds-monitor`
@@ -58,8 +58,7 @@ Here you install the client, the current client is Telegram. You will need to pr
 
 ## Configure files
 
-To run the tool stratos-monitor yourself:
-### Location files:
+To run the tool **stratos-monitor** yourself:
 1. Clone the repository:
 ```
 git clone https://github.com/FUNDBaron/stratos-monitor
@@ -72,7 +71,7 @@ cd stratos-monitor
 4. On each server in the `status.py` file in the `node_dirs` list change the absolute paths where your resource nodes are located
 5. Place the `scan_servers.py` and `connect.py` scripts on the server from which the script will connect to the Stratos servers
 
-### Configure the `сonnect.py` file:
+### Configure the `сonnect.py` file
 Parameters:
 - `time_long_pause` - the waiting time interval after which you want to check statuses nodes on each server
 * `time_short_pause` - timeout interval for the `status.py` script to complete execution (the more data your nodes store, the longer the interval should be specified)
