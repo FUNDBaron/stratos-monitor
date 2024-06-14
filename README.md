@@ -65,6 +65,11 @@ To run the tool stratos-monitor yourself, clone the repository:
 ```
 git clone https://github.com/FUNDBaron/stratos-monitor
 ```
+change directory on:
+```
+cd stratos-monitor
+```
+
 
 
 
