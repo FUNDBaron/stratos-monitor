@@ -113,7 +113,7 @@ screen -r status
 ``` 
 - To exit the **screen** session and close it, enter `exit` or press the combination *Ctrl+D*
 
-I also want to thank **@FrogeWorld** validator Stratos for starting the path for these scripts
+I also want to thank **@FrogeWorld** validator Stratos network for starting the path for these scripts
 
 
 
