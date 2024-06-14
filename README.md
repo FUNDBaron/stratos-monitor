@@ -18,10 +18,10 @@ pip install argparse
 Here you install the client, the current client is Telegram. You will need to provide the ID of the channel you want to send messages to and the Telegram bot API key accordingly.
 
 ### Create a Telegram Bot and get a Bot Token:
+Сreate a new telegram bot and get an API Token key.
 [How to get Telegram API key](https://www.siteguarding.com/en/how-to-get-telegram-bot-api-token)
 
 ### Get Chat ID for a Private Chat:
-
 1. Search and open our new Telegram bot
 2. Click `\start` or send any a message
 3. Create new your **private** chat, for example `sds-monitor`
