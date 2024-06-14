@@ -83,11 +83,17 @@ Then specify the list of servers and connection authentication data: `name`,`ip`
 
 ## Run
 To connect servers and check statuses automatically, we will use the `screen` tool:
-```apt-get install screen```
-- Start a session with name `status`
-```screen -S status```
-* Lets run script
-```python3 scan-servers.py```
+```
+apt-get install screen
+```
+- Start a session with name `status`:
+```
+screen -S status
+```
+* Lets run script:
+```
+python3 scan-servers.py
+```
 
 
 
