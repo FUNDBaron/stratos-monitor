@@ -2,7 +2,10 @@
 This is a tool used to connect to the servers and obtain information about the status info of running Stratos nodes and send status/storage/rewards data to the monitoring console and telegram chat notifications.
 
 ## Install
+
+Install Python3 (I used Python 3.10.12 and 3.12.3) and package management system `pip` and dependencies of other libraries
 ```
+sudo apt install python3.12
 apt-get install python3-pip
 pip install paramiko
 pip install sockets
