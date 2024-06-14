@@ -1,7 +1,7 @@
 # Stratos monitoring and notifications nodes
 This is a tool used to connect to the servers and obtain information about the status info of running Stratos nodes and send status/storage/rewards data to the monitoring console and telegram chat notifications.
 
-## Install and Python Dependencies
+## Install
 ```
 apt-get install python3-pip
 pip install paramiko
@@ -14,7 +14,7 @@ pip install tabulate
 pip install getpass4
 pip install argparse
 ```
-## Configuration
+## Pre-Configure
 Here you install the client, the current client is Telegram. You will need to provide the ID of the channel you want to send messages to and the Telegram bot API key accordingly.
 
 ### Create a Telegram Bot and get a Bot Token:
@@ -55,19 +55,24 @@ Here you install the client, the current client is Telegram. You will need to pr
 9. Let's try to send a message: `https://api.telegram.org/bot63xxxxxx71:AAFoxxxxn0hwA-2TVSxxxNf4c/sendMessage?chat_id=-100xxxxxxxx45&text=test123`
 10. When you set the bot token and chat id correctly, the message `test123` should be arrived on our Telegram bot chat.
 
-## Run
+## Configure files
 
-To run the tool stratos-monitor yourself, clone the repository:
+To run the tool stratos-monitor yourself:
+### Location files:
+1. Clone the repository:
 ```
 git clone https://github.com/FUNDBaron/stratos-monitor
 ```
-change directory on:
+2. Change directory on:
 ```
 cd stratos-monitor
 ```
+3. Place the `status.py` script on each of the servers where Stratos node resource running, for example: in the user $HOME directory
+4. Place the `scan-servers.py` and `connect.py` scripts on the server from which the script will connect to the Stratos servers
+
 ### Configure the `сonnect.py` file:
 - `time_long_pause` - the waiting time interval after which you want to check statuses nodes on each server
-* `time_short_pause` -timeout interval for the `status.py` script to complete execution (the more data your nodes store, the longer the interval should be specified)
+* `time_short_pause` - timeout interval for the `status.py` script to complete execution (the more data your nodes store, the longer the interval should be specified)
 + `path_to_status_script` - path to the `status.py` file starting from the home directory of the logged in user(default: $HOME directory)
 - `TOKEN` - telegram API Token received from the Father_bot when creating your new_bot
 * `CHAT_ID` - chat identifier to which notifications about node statuses will be sent
@@ -75,6 +80,17 @@ cd stratos-monitor
 Then specify the list of servers and connection authentication data: `name`,`ip`,`login`,
 - `password` or `sshkey` - path to ssh the private key file (specify the path relative to the location of the `connect.py` and `scan_servers.py` files),
 * set the value `localhost: True` on one server in the list if you run the script `scan_servers.py` on the server where the Stratos nodes resource is located, otherwise leave  `localhost: False`
+
+## Run
+To connect servers and check statuses automatically, we will use the `screen` tool:
+```apt-get install screen```
+- Start a session with name `status`
+```screen -S status```
+* Lets run script
+```python3 scan-servers.py```
+
+
+
 
 
 
