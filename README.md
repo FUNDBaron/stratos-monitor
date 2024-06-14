@@ -67,11 +67,12 @@ git clone https://github.com/FUNDBaron/stratos-monitor
 ```
 cd stratos-monitor
 ```
-3. Place the `status.py` script on each of the servers where Stratos node resource running, for example: in the user $HOME directory
-4. On each server in the `status.py` file in the `node_dirs` list we indicate the absolute paths where your resource nodes are located
+3. Place the `status.py` script on each of the servers where Stratos node resource running, for example: in the user `$HOME` directory
+4. On each server in the `status.py` file in the `node_dirs` list change the absolute paths where your resource nodes are located
 5. Place the `scan_servers.py` and `connect.py` scripts on the server from which the script will connect to the Stratos servers
 
 ### Configure the `сonnect.py` file:
+Parameters:
 - `time_long_pause` - the waiting time interval after which you want to check statuses nodes on each server
 * `time_short_pause` - timeout interval for the `status.py` script to complete execution (the more data your nodes store, the longer the interval should be specified)
 + `path_to_status_script` - path to the `status.py` file starting from the home directory of the logged in user(default: $HOME directory)
@@ -92,10 +93,23 @@ apt-get install screen
 ```
 screen -S status
 ```
-+ Lets run script:
++ Go to the directory where the `scan_servers.py` script is located:
+- Lets run script:
 ```
 python3 scan_servers.py
 ```
+## Notes
++ To disconnect from **screen**, enter the combination *Ctrl+A, D* on your keyboard (first press *Ctrl+A*, then *D* together)
+- To view a list of screen sessions, run the command:
+```
+screen -ls
+```
+* To join an existing session again:
+```
+screen -r status
+```
+To exit the **screen** session and close it, enter `exit` or press the combination *Ctrl+D*
+
 
 
 
