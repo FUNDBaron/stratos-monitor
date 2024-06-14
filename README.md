@@ -1,4 +1,4 @@
-# stratos-monitor tool for monitoring and notifying for resource nodes
+# stratos-monitor tool for monitoring and notifications
 This is a tool used to connect to the servers and obtain information about the status info of running Stratos nodes and send status/storage/rewards data to the monitoring console and telegram chat notifications.
 
 ## Install
