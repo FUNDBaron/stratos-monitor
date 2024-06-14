@@ -38,9 +38,34 @@ Here you install the client, the current client is Telegram. You will need to pr
 
 1. Search and open our new Telegram bot
 2. Click Start or send a message
-3. Open this URL in a browser `https://api.telegram.org/bot{our_bot_token}/getUpdates`
+3. Create new your private chat, for example 'sds-monitor'
+4. Add our Telegram bot into a private chat and make him an administrator
+5. Send a message to your the private chat
+6. Open this URL in a browser `https://api.telegram.org/bot{our_bot_token}/getUpdates`
  - See we need to prefix our token with a wor `bot`
  * Eg: `https://api.telegram.org/bot63xxxxxx71:AAFoxxxxn0hwA-2TVSxxxNf4c/getUpdates`
+7. We will see a json like so 
+`   {
+      "update_id": 565837220,
+      "channel_post": {
+        "message_id": 1235,
+        "sender_chat": {
+          "id": -100xxxxxxxx45,
+          "title": "stratos_monitor",
+          "type": "channel"
+        },
+        "chat": {
+          "id": -100xxxxxxxx45,
+          "title": "stratos_monitor",
+          "type": "channel"
+        },
+        "date": 1718883704,
+        "text": "hello",
+        "has_protected_content": true
+    }
+`
+8. Check the value of `.chat.id`, and here is our Chat ID: `-100xxxxxxxx45`
+9. Let's try to send a message: `https://api.telegram.org/bot63xxxxxx71:AAFoxxxxn0hwA-2TVSxxxNf4c/sendMessage?chat_id=-100xxxxxxxx45&text=test123`
 
 # Build
 
@@ -48,7 +73,6 @@ To run the tool stratos-monitor yourself, clone the repository:
 
 ```
 git clone https://github.com/FUNDBaron/stratos-monitor
-
 ```
 
 
