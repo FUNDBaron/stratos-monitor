@@ -19,6 +19,7 @@ Here you install the client, the current client is Telegram. You will need to pr
 
 ### Create a Telegram Bot and get a Bot Token:
 Сreate a new telegram bot and get an API Token key.
+
 [How to get Telegram API key](https://www.siteguarding.com/en/how-to-get-telegram-bot-api-token)
 
 ### Get Chat ID for a Private Chat:
